@@ -1,0 +1,23 @@
+{
+  "name": "ifttt-hook-translator",
+  "version": "1.0.0",
+  "description": "translate webhooks to maker channel iftt requests!!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npm/ifttt-hook-translator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npm/ifttt-hook-translator/issues"
+  },
+  "homepage": "https://github.com/npm/ifttt-hook-translator#readme",
+  "dependencies": {
+    "@npmcorp/npm-hook-receiver": "0.0.5",
+    "request": "^2.72.0"
+  }
+}
