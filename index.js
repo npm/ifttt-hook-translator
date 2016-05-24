@@ -1,5 +1,6 @@
 var http = require('http')
 var url = require('url')
+var request = require('request')
 
 var server = http.createServer(function(req,res){
   console.log(JSON.stringify({date:new Date(),method:req.method,url:req.url}))
@@ -39,7 +40,16 @@ function handle(req,res,body){
   console.log('query data >',data)
   console.log('body keys ',Object.keys(body))
 
-  var makeurl = 'https://maker.ifttt.com/trigger/{event}/with/key/clGkNTM49H3zuenXBz9TSh'
+  var makeurl = 'https://maker.ifttt.com/trigger/'+data.event+'/with/key/'+data.makerKey
+
+  console.log('triggering> ',makeurl)
+
+  request.post(makeurl,{body:JSON.stringify({value1:"value 1",value2:" value 2",value3:"value 3"}),headers:{'content-type':'application/json'}},function(err,res,body){
+    console.log(err)
+    console.log(res.statusCode)
+    console.log(body)
+  })
+
   respond(req,res,200,[body,data])
 }
 
