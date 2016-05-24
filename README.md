@@ -1,11 +1,12 @@
 # ifttt-hook-translator
-translate webhooks to maker channel iftt requests!!
+Translate webhooks to maker channel iftt requests!!
 
 
-***   not published to npm yet ***
+This sends configured webhooks to the user's ifttt maker channel. 
+With this, they can trigger any other ifttt action.
 
 
-## setup!
+## example setup
 
 create a new recipe that posts npm webhook changes to your slack!
 
@@ -51,5 +52,5 @@ create a new recipe that posts npm webhook changes to your slack!
 11. wombat! open your terminal and run 
 
 ```
-wombat hooks add <your scope orr package> 'http://ifttt.npmjs.com/hooks?makerKey=<your key from step 3>&event=package' a-secret-dores-not-matter
+wombat hooks add <your scope or package> 'http://ifttt.npmjs.com/hooks?makerKey=<your key from step 3>&event=package' a-secret-does-not-matter
 ```
