@@ -5,7 +5,7 @@ var request = require('request')
 var server = http.createServer(function(req,res){
   console.log(JSON.stringify({date:new Date(),method:req.method,url:req.url}))
 
-  if(req.url.indexOf('/hooks') !== 0 || req.method != 'post') {
+  if(req.url.indexOf('/hooks') !== 0 || req.method != 'POST') {
     respond(req,res)
     return
   } 
@@ -44,7 +44,7 @@ function handle(req,res,body){
 
   console.log('triggering> ',makeurl)
 
-  request.post(makeurl,{body:JSON.stringify({value1:"value 1",value2:" value 2",value3:"value 3"}),headers:{'content-type':'application/json'}},function(err,res,body){
+  request.post(makeurl,{body:JSON.stringify({value1:body.name,value2:body.type,value3:JSON.stringify(body.change)}),headers:{'content-type':'application/json'}},function(err,res,body){
     console.log(err)
     console.log(res.statusCode)
     console.log(body)
