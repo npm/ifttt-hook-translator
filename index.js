@@ -35,7 +35,6 @@ function handle(req,res,body){
 
   var parsed = url.parse(req.url,true)
   var data = parsed.query
-  var eventFilter = data.event
 
   console.log('query data >',data)
   console.log('body keys ',Object.keys(body))
@@ -44,7 +43,7 @@ function handle(req,res,body){
 
   console.log('triggering> ',makeurl)
 
-  request.post(makeurl,{body:JSON.stringify({value1:body.name,value2:body.type,value3:JSON.stringify(body.change)}),headers:{'content-type':'application/json'}},function(err,res,body){
+  request.post(makeurl,{body:JSON.stringify({value1:body.name,value2:body.event,value3:JSON.stringify(body.change)}),headers:{'content-type':'application/json'}},function(err,res,body){
     console.log(err)
     console.log(res.statusCode)
     console.log(body)
