@@ -43,7 +43,9 @@ function handle(req,res,body){
 
   console.log('triggering> ',makeurl)
 
-  request.post(makeurl,{body:JSON.stringify({value1:body.name,value2:body.event,value3:JSON.stringify(body.change)}),headers:{'content-type':'application/json'}},function(err,res,body){
+  var event = (body.event||'unknown').split(':').pop()
+
+  request.post(makeurl,{body:JSON.stringify({value1:body.name,value2:event,value3:JSON.stringify(body.change)}),headers:{'content-type':'application/json'}},function(err,res,body){
     console.log(err)
     console.log(res.statusCode)
     console.log(body)
