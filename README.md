@@ -34,7 +34,7 @@ make your own recipe!
 
   ![new recipe](./step1.png)
 
-5. click "that" and search for "maker". click the M logo
+5. click "this" and search for "maker". click the M logo
 
   ![search maker](./step2.png)
 
