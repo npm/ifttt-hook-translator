@@ -1,6 +1,6 @@
 {
   "name": "ifttt-hook-translator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "translate webhooks to maker channel iftt requests!!",
   "main": "index.js",
   "scripts": {
