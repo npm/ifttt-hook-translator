@@ -5,16 +5,23 @@ Translate webhooks to maker channel iftt requests!!
 
 webhook package changes to IFTTT. trigger any action supported by IFTTT
 
+actions flow through the ether like this.
+```
+[package change]->[npm hook]->[this server]->[https://maker.ifttt.com]->[any "that" integration]
+```
 
 
+## Slack example.
 
-## example
+use the existing recipe:
 
+https://ifttt.com/recipes/423099-npm-webhooks-to-slack-notif 
 
-create a new recipe that posts npm webhook changes to your slack!
+and skip to <a href="#addhook">adding the hook</a>
+
+or create a new recipe that posts npm webhook changes to your slack!
 
 ![result](./result.png)
-
 
 after you complete the first time setup all you need to do to is add hooks with this server as the endpoint (example running on http://ifttt.npmjs.com )
 
@@ -37,7 +44,7 @@ make your own recipe!
 
   ![new recipe](./step1.png)
 
-5. click "that" and search for "maker". click the M logo
+5. click "this" and search for "maker". click the M logo
 
   ![search maker](./step2.png)
 
@@ -62,7 +69,7 @@ make your own recipe!
   ![slack form](./step7.png)
 
 
-### add a hook to a package/scope/or author
+### <a name="addhook">add a hook to a package/scope/or author</a>
 
 wombat! open your terminal and run 
 
