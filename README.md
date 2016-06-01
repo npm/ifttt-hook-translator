@@ -1,8 +1,11 @@
+
 # ifttt-hook-translator
 
 Translate webhooks to maker channel iftt requests!!
 
 webhook package changes to IFTTT. trigger any action supported by IFTTT
+
+
 
 
 ## example
@@ -66,3 +69,5 @@ wombat! open your terminal and run
 ```
 wombat hooks add <your scope or package> 'http://ifttt.npmjs.com/hooks?makerKey=<your key from step 3>&event=package' a-secret-does-not-matter
 ```
+
+our bridge at http://ifttt.npmjs.com/ is just for fun/education and we do not intend on supporting this service as a public api. please deploy this server yourself =)

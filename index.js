@@ -36,8 +36,6 @@ function handle(req,res,body){
   var parsed = url.parse(req.url,true)
   var data = parsed.query
 
-  console.log('query data >',data)
-  console.log('body keys ',Object.keys(body))
 
   var makeurl = 'https://maker.ifttt.com/trigger/'+data.event+'/with/key/'+data.makerKey
 
